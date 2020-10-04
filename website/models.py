@@ -25,4 +25,7 @@ class Post(models.Model):
     def full_desc(self):
         return self.title + self.sub_title
 
+    def get_categories_label(self):
+        return self.get_categories_display()
+
     full_desc.admin_order_field = 'title'

@@ -1,3 +1,4 @@
+
 {% load static %}
 
 <!DOCTYPE HTML>
@@ -32,73 +33,15 @@
 				<!-- One -->
 					<section id="one">
 						<header class="major">
-							<h2>Ipsum lorem dolor aliquam ante commodo<br />
-							magna sed accumsan arcu neque.</h2>
+							<h2>{{ post.title }}</h2>
+                            <h4>{{ post.sub_title }}</h4>
 						</header>
-						<p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia.</p>
+						<p>{{ post.content }}</p>
 						<ul class="actions">
-							<li><a href="#" class="button">Learn More</a></li>
+							<li><a href="{% url 'website' %}" class="btn btn-info ">Voltar</a></li>
 						</ul>
 					</section>
 
-				<!-- Two -->
-					<section id="two">
-						<h2>Posts</h2>
-						<div class="row">
-							{% for post in posts %}
-								<article class="col-6 col-12-xsmall work-item">
-									<a href="{% static 'images/fulls/01.jpg' %}" class="image fit thumb"><img src="{% static 'images/thumbs/01.jpg' %}" alt="" /></a>
-									<h3>{{ post.title }}</h3>
-									<p>{{ post.sub_title }}</p>
-									<span>{{ post.get_categories_label }}</span>
-									<ul class="actions">
-										<li><a href="{% url 'post_detail' post.id %}" class="button">Read more</a></li>
-									</ul>
-							</article>
-							{% endfor %}
-						</div>
-						<ul class="actions">
-							<li><a href="#" class="button">Full Portfolio</a></li>
-						</ul>
-					</section>
-
-				<!-- Three -->
-					<section id="three">
-						<h2>Get In Touch</h2>
-						<p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
-						<div class="row">
-							<div class="col-8 col-12-small">
-								<form method="post" action="#">
-									<div class="row gtr-uniform gtr-50">
-										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
-										<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
-									</div>
-								</form>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</div>
-							<div class="col-4 col-12-small">
-								<ul class="labeled-icons">
-									<li>
-										<h3 class="icon solid fa-home"><span class="label">Address</span></h3>
-										1234 Somewhere Rd.<br />
-										Nashville, TN 00000<br />
-										United States
-									</li>
-									<li>
-										<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
-										000-000-0000
-									</li>
-									<li>
-										<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-										<a href="#">hello@untitled.tld</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</section>
 			</div>
 
 		<!-- Footer -->
